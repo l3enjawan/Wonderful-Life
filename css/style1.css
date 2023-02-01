@@ -180,19 +180,7 @@ section img#mountain {
 .col-12 {
   width: 100%;
 }
-
-main {
-  background: var(--color-bg);
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-}
-
+/* 
 .slide-button__container {
   position: relative;
   background: var(--slide-button-color-bg);
@@ -259,4 +247,4 @@ main {
   pointer-events: none;
   z-index: 0;
   opacity: 0;
-}
+} */
