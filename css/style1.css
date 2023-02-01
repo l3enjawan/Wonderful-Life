@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: auto;
+  box-sizing: border-box;
+  font-family: "Concert One", cursive;
+}
+body {
+  min-height: 100vh;
+  background: linear-gradient(#536cc3, #c8b0d6);
+}
+.box {
+  height: auto;
+  box-shadow: 0 0 15px 0 rgb(0 0 0 / 10%);
+  padding: 20px;
+  text-align: center;
+  transition: ease all 0.5s;
+  background-color: white;
+  color: #2b1055;
+}
+div.content {
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 50px 16px;
+  height: auto;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Jua", sans-serif;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+}
+
+.logo {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  list-style: none;
+  margin: 20px;
+}
+header ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  background: #fff;
+  color: #2b1055;
+}
+
+a:hover,
+a.active {
+  background: #fff;
+  color: #2b1055;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #536cc3, transparent);
+  z-index: 1000;
+}
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+section img#mountain {
+  z-index: 10;
+}
+
+#titlebg {
+  position: absolute;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 7.5vw;
+  z-index: 6;
+}
+
+.sec {
+  padding: 100px;
+  background-color: #536cc3;
+  font-size: 20px;
+}
+.sec h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.sec p {
+  font-size: 2 em;
+  color: #fff;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+
+main {
+  background: var(--color-bg);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+}
+
+.slide-button__container {
+  position: relative;
+  background: var(--slide-button-color-bg);
+  width: 300px;
+  height: 50px;
+  border-radius: 3px;
+  padding: 4px;
+  box-sizing: border-box;
+  font-family: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-weight: 500;
+  color: var(--slide-button-color-text);
+  font-size: 1.2em;
+  outline: none;
+  overflow: hidden;
+}
+
+.slide-button__control {
+  width: 60px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  background: var(--slide-button-control-control-bg);
+  outline: none;
+  z-index: 2;
+  padding: 8px 0;
+  box-sizing: border-box;
+}
+
+.slide-button__control svg {
+  height: 100%;
+}
+
+.slide-button__control svg .arrow:not(.arrow__completed) {
+  fill: var(--slide-button-color-bg);
+}
+
+.slide-button__control svg .arrow.arrow__completed {
+  fill: var(--slide-button-completed-color-bg);
+  opacity: 0;
+}
+
+.slide-button__text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  user-select: none;
+}
+
+.slide-button__completed-overlay {
+  width: 100%;
+  height: 100%;
+  background: var(--slide-button-completed-color-bg);
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+}

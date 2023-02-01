@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Wonderful Life</title>
+
+    <!-- icon -->
+    <link rel="shortcut icon" type="image/jpg" href="./imgaes/logo.jpg" />
+
+    <!-- CSS -->
+    <link href="./css/style1.css" rel="stylesheet" />
+
+    <!-- font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <header>
+        <a href="#" class="logo">Wonderful Life</a>
+        <!-- <ul>
+           <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Logo1</a></li>
+          <li><a href="#">Logo1</a></li>
+          <li><a href="#">Logo1</a></li>
+        </ul> -->
+      </header>
+    </div>
+    <section>
+      <img src="./imgaes/mountain.png" id="mountain" />
+      <img src="./imgaes/sun.png" id="sun" />
+
+      <h2 id="titlebg">WELCOME</h2>
+    </section>
+    <div class="sec row" id="sec">
+      <div class="col-5">
+        <img
+          src="./imgaes/sunshine1.png"
+          id="sunshine1"
+          style="width: 100%; z-index: 10"
+        />
+      </div>
+
+      <div class="col-7">
+        <div style="text-align: center">
+          <h2>
+            Hello, my name is Sunshine. I will take you on a trip called
+            Wonderful life in surat.
+          </h2>
+          <br />
+          <h2>Are you ready to travel in this land of happiness with us?</h2>
+        </div>
+      </div>
+    </div>
+    <main class="sec">
+      <div class="slide-button__container">
+        <span class="slide-button__text">Add to Cart</span>
+        <div class="slide-button__completed-overlay">
+          <span class="slide-button__text">Proceeding...</span>
+        </div>
+        <div class="slide-button__control">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="47.418"
+            height="82.64"
+            viewBox="0 0 47.418 82.64"
+          >
+            <path
+              class="arrow"
+              d="M13.878,82.457,5.979,75.4a1.763,1.763,0,0,1,0-2.5L33.835,41.625,5.874,10.349a1.763,1.763,0,0,1,0-2.5l7.9-7.052a1.763,1.763,0,0,1,2.5,0L52.77,41.625,16.381,82.316a1.763,1.763,0,0,1-2.5.141Z"
+              transform="translate(-5.352 -0.272)"
+            />
+            <path
+              class="arrow arrow__completed"
+              d="M13.878,82.457,5.979,75.4a1.763,1.763,0,0,1,0-2.5L33.835,41.625,5.874,10.349a1.763,1.763,0,0,1,0-2.5l7.9-7.052a1.763,1.763,0,0,1,2.5,0L52.77,41.625,16.381,82.316a1.763,1.763,0,0,1-2.5.141Z"
+              transform="translate(-5.352 -0.272)"
+            />
+          </svg>
+        </div>
+      </div>
+    </main>
+    <script>
+      let sun = document.getElementById("sun");
+      let tetitlebg = document.getElementById("titlebg");
+      let header = document.querySelector("header");
+
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        sun.style.top = value * 1.05 + "px";
+        sun.style.top = value * 1.05 + "px";
+        tetitlebg.style.marginRight = value * 5 + "px";
+        header.style.top = value * 0.05 + "px";
+      });
+    </script>
+  </body>
+</html>
