@@ -13,11 +13,11 @@ body {
 
 .box {
   height: auto;
-  box-shadow: 0 0 15px 0 rgb(0 0 0 / 10%);
+  box-shadow: 10px 15px 40px #36486b;
   padding: 20px;
   text-align: center;
   transition: ease all 0.5s;
-  background-color: white;
+  background-color: transparent;
   color: #2b1055;
 }
 
