@@ -30,92 +30,87 @@ ID 6502041520064 -->
           <a href="./index.html" class="logo">Wonderful Life</a>
 
           <ul>
-            <li><a href="./index.html" class="active">Home</a></li>
-            <li><a href="#">Logo1</a></li>
-            <li><a href="#">Logo1</a></li>
-            <li><a href="#">Logo1</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./choosetrip.html" class="active">Trips</a></li>
+            <li><a href="./natural.html">Natural</a></li>
+            <li><a href="./downtown.html">Downtown</a></li>
+            <li><a href="./sea.html">Sea</a></li>
           </ul>
         </header>
       </div>
     </div>
-
-    <div class="col-12">
-      <br />
-      <h2 style="text-align: center; font-size: 7.5vw; color: #fff">
-        Choose A Trip
-      </h2>
+    <div class="content">
+      <div class="col-12" style="margin-top: 5%">
+        <h2 style="text-align: center; font-size: 7.5vw; color: #fff">
+          Choose A Trip
+        </h2>
+      </div>
     </div>
-
     <div class="col-12" style="margin-top: 15%">
       <div class="row" style="display: flex; justify-content: space-between">
-        <div class="circle">
+        <div
+          class="circle"
+          id="onclick-tural"
+          onclick="navigateTopage('./natural.html');"
+        >
           <div class="circle_title">
-            <h2>Great Outdoors</h2>
-            <h3>Get some fresh air</h3>
+            <h2>Take a train</h2>
+            <h3>To visit breathtaking natural sights.</h3>
           </div>
           <div class="circle_inner">
             <div class="circle_inner__layer">
-              <img
-                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc1.png"
-              />
+              <img src="./imgaes/pc1.png" />
             </div>
             <div class="circle_inner__layer">
-              <img
-                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc3.png"
-              />
+              <img src="./imgaes/pc3.png" />
             </div>
             <div class="circle_inner__layer">
-              <img
-                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc2.png"
-              />
+              <img src="./imgaes/pc2.png" />
             </div>
           </div>
           <div class="content_shadow"></div>
         </div>
-        <div class="circle">
+
+        <div
+          class="circle"
+          id="onclick-todown"
+          onclick="navigateTopage('./downtown.html');"
+        >
           <div class="circle_title">
-            <h2>City Breaks</h2>
-            <h3>Go somewhere new</h3>
+            <h2>Take a bus</h2>
+            <h3>To visit somewhere in downtown.</h3>
           </div>
           <div class="circle_inner">
             <div class="circle_inner__layer">
-              <img
-                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc4.png"
-              />
+              <img src="./imgaes/pc4.png" />
             </div>
             <div class="circle_inner__layer">
-              <img
-                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc5.png"
-              />
+              <img src="./imgaes/pc5.png" />
             </div>
             <div class="circle_inner__layer">
-              <img
-                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc6.png"
-              />
+              <img src="./imgaes/pc6.png" />
             </div>
           </div>
           <div class="content_shadow"></div>
         </div>
-        <div class="circle">
+        <div
+          class="circle"
+          id="onclick-sea"
+          onclick="navigateTopage('./sea.html');"
+        >
           <div class="circle_title">
-            <h2>Cheap Flights</h2>
-            <h3>Come fly with me</h3>
+            <h2>Take a ship</h2>
+            <h3>To swim in the sea</h3>
           </div>
           <div class="circle_inner">
             <div class="circle_inner__layer">
-              <img
-                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc7.png"
-              />
+              <img src="./imgaes/pc7.png" />
             </div>
             <div class="circle_inner__layer">
-              <img
-                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc8.png"
-              />
+              <img src="./imgaes/pc9.png" />
             </div>
             <div class="circle_inner__layer">
-              <img
-                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc9.png"
-              />
+              <img src="./imgaes/pc8.png" />
             </div>
           </div>
           <div class="content_shadow"></div>
@@ -124,16 +119,17 @@ ID 6502041520064 -->
     </div>
 
     <script>
-      let sun = document.getElementById("sun");
-      let sunshine2 = document.getElementById("sunshine2");
-      let header = document.querySelector("header");
-
-      window.addEventListener("scroll", function () {
-        let value = window.scrollY;
-        sun.style.top = value * 1.05 + "px";
-        sunshine2.style.marginLeft = value * 5 + "px";
-        header.style.top = value * 0.05 + "px";
-      });
+      function navigateTopage(topage) {
+        document.getElementById("onclick-tural").onclick = function () {
+          window.location.href = topage;
+        };
+        document.getElementById("onclick-todown").onclick = function () {
+          window.location.href = topage;
+        };
+        document.getElementById("onclick-sea").onclick = function () {
+          window.location.href = topage;
+        };
+      }
     </script>
   </body>
 </html>
