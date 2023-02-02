@@ -11,7 +11,7 @@ ID 6502041520064 -->
 
     <!-- CSS -->
     <link href="./css/style1.css" rel="stylesheet" />
-    <link href="./css/swipebutton.scss" rel="stylesheet" />
+    <link href="./css/styletraval.css" rel="stylesheet" />
     <!-- font google -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,18 +28,100 @@ ID 6502041520064 -->
       <div class="content">
         <header>
           <a href="./index.html" class="logo">Wonderful Life</a>
+
           <ul>
             <li><a href="./index.html" class="active">Home</a></li>
+            <li><a href="#">Logo1</a></li>
+            <li><a href="#">Logo1</a></li>
+            <li><a href="#">Logo1</a></li>
           </ul>
         </header>
       </div>
     </div>
-    <section>
-      <img src="./imgaes/sun.png" id="sun" />
-      <img src="./imgaes/sunshine2.png" id="sunshine2" />
 
-      <h2 id="titlebg">Choose A Trip</h2>
-    </section>
+    <div class="col-12">
+      <br />
+      <h2 style="text-align: center; font-size: 7.5vw; color: #fff">
+        Choose A Trip
+      </h2>
+    </div>
+
+    <div class="col-12" style="margin-top: 15%">
+      <div class="row" style="display: flex; justify-content: space-between">
+        <div class="circle">
+          <div class="circle_title">
+            <h2>Great Outdoors</h2>
+            <h3>Get some fresh air</h3>
+          </div>
+          <div class="circle_inner">
+            <div class="circle_inner__layer">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc1.png"
+              />
+            </div>
+            <div class="circle_inner__layer">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc3.png"
+              />
+            </div>
+            <div class="circle_inner__layer">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc2.png"
+              />
+            </div>
+          </div>
+          <div class="content_shadow"></div>
+        </div>
+        <div class="circle">
+          <div class="circle_title">
+            <h2>City Breaks</h2>
+            <h3>Go somewhere new</h3>
+          </div>
+          <div class="circle_inner">
+            <div class="circle_inner__layer">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc4.png"
+              />
+            </div>
+            <div class="circle_inner__layer">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc5.png"
+              />
+            </div>
+            <div class="circle_inner__layer">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc6.png"
+              />
+            </div>
+          </div>
+          <div class="content_shadow"></div>
+        </div>
+        <div class="circle">
+          <div class="circle_title">
+            <h2>Cheap Flights</h2>
+            <h3>Come fly with me</h3>
+          </div>
+          <div class="circle_inner">
+            <div class="circle_inner__layer">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc7.png"
+              />
+            </div>
+            <div class="circle_inner__layer">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc8.png"
+              />
+            </div>
+            <div class="circle_inner__layer">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pc9.png"
+              />
+            </div>
+          </div>
+          <div class="content_shadow"></div>
+        </div>
+      </div>
+    </div>
 
     <script>
       let sun = document.getElementById("sun");
@@ -52,23 +134,6 @@ ID 6502041520064 -->
         sunshine2.style.marginLeft = value * 5 + "px";
         header.style.top = value * 0.05 + "px";
       });
-    </script>
-
-    <script>
-      window.onscroll = function () {
-        myFunction();
-      };
-
-      var navbar = document.getElementById("navbar");
-      var sticky = navbar.offsetTop;
-
-      function myFunction() {
-        if (window.pageYOffset >= sticky) {
-          navbar.classList.add("sticky");
-        } else {
-          navbar.classList.remove("sticky");
-        }
-      }
     </script>
   </body>
 </html>
