@@ -1,0 +1,74 @@
+<!-- Benjawan Promthongnun
+ID 6502041520064 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Wonderful Life</title>
+
+    <!-- icon -->
+    <link rel="shortcut icon" type="image/jpg" href="./imgaes/logo.jpg" />
+
+    <!-- CSS -->
+    <link href="./css/style1.css" rel="stylesheet" />
+    <link href="./css/swipebutton.scss" rel="stylesheet" />
+    <!-- font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <div class="content">
+        <header>
+          <a href="./index.html" class="logo">Wonderful Life</a>
+          <ul>
+            <li><a href="./index.html" class="active">Home</a></li>
+          </ul>
+        </header>
+      </div>
+    </div>
+    <section>
+      <img src="./imgaes/sun.png" id="sun" />
+      <img src="./imgaes/sunshine2.png" id="sunshine2" />
+
+      <h2 id="titlebg">Choose A Trip</h2>
+    </section>
+
+    <script>
+      let sun = document.getElementById("sun");
+      let sunshine2 = document.getElementById("sunshine2");
+      let header = document.querySelector("header");
+
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        sun.style.top = value * 1.05 + "px";
+        sunshine2.style.marginLeft = value * 5 + "px";
+        header.style.top = value * 0.05 + "px";
+      });
+    </script>
+
+    <script>
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
+  </body>
+</html>
