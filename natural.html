@@ -10,8 +10,10 @@ ID 6502041520064 -->
     <link rel="shortcut icon" type="image/jpg" href="./imgaes/logo.jpg" />
 
     <!-- CSS -->
-    <link href="./css/style1.css" rel="stylesheet" />
-    <link href="./css/styletraval.css" rel="stylesheet" />
+    <link href="./css/styletrip.css" rel="stylesheet" />
+    <link href="./css/styleheader.css" rel="stylesheet" />
+    <!-- <link href="./css/styletraval.css" rel="stylesheet" /> -->
+
     <!-- font google -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +22,48 @@ ID 6502041520064 -->
       rel="stylesheet"
     />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+      .parallax-container {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        /*  this is where the magic happens:  */
+        background-attachment: fixed;
+
+        background-image: url("./imgaes/bgnatural1.gif");
+        background-position: center;
+        background-size: cover;
+        color: var(--color);
+        row-gap: 4rem;
+
+        text-align: center;
+      }
+
+      .parallax-container2 {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        padding: 6rem 0;
+        background-image: url("./imgaes/bgnatural2.gif");
+      }
+
+      .card:nth-of-type(1) .card-img {
+        background-image: url("./imgaes/khaosok.jpg");
+      }
+
+      .card:nth-of-type(2) .card-img {
+        background-image: url("./imgaes/rajjaprabha.png");
+      }
+
+      .card:nth-of-type(3) .card-img {
+        background-image: url("./imgaes/khaosok.jpg");
+      }
+
+      .card:nth-of-type(4) .card-img {
+        background-image: url("./imgaes/namrat.png");
+      }
     </style>
   </head>
   <body>
@@ -32,7 +75,6 @@ ID 6502041520064 -->
           <ul>
             <li><a href="./index.html">Home</a></li>
             <li><a href="./choosetrip.html" class="active">Trips</a></li>
-
             <!-- <li><a href="./natural.html">Natural</a></li>
             <li><a href="./downtown.html">Downtown</a></li>
             <li><a href="./sea.html">Sea</a></li> -->
@@ -41,12 +83,127 @@ ID 6502041520064 -->
         </header>
       </div>
     </div>
-    <div class="content">
-      <div class="col-12" style="margin-top: 5%">
-        <h2 style="text-align: center; font-size: 7.5vw; color: #fff">
-          Natural
-        </h2>
+    <section class="parallax-container">
+      <div class="sec row col-12">
+        <div class="sec row col-12 box">
+          <br /><br /><br />
+          <h2
+            style="
+              text-align: center;
+              font-size: 7.5vw;
+              color: #fff;
+              margin-bottom: 90px;
+            "
+          >
+            Natural
+          </h2>
+        </div>
       </div>
-    </div>
+      <audio id="myaudio" class="myaudio" controls autoplay muted>
+        <source src="./music/wagzak.mp3" type="audio/mpeg" />
+      </audio>
+    </section>
+
+    <section class="buffer">
+      <div class="sec row col-12">
+        <div class="sec col-12 box">
+          <div class="col-8 contenttext">
+            <br /><br /><br />
+            <h2 style="text-align: center; font-size: 4vw; color: #060606">
+              Hey, I'm Star.
+            </h2>
+            <br />
+            <center>
+              <p>
+                <br />
+                I'm Sunshine's friend, acting as a nature tour guide.
+                <br />
+                I have many natural attractions in Surat for you to see.
+              </p>
+            </center>
+
+            <br /><br /><br />
+          </div>
+          <div class="col-4">
+            <img src="./imgaes/star1.png" id="sunshine1" style="width: 80%" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="parallax-container parallax-container2">
+      <div class="card">
+        <div class="card-img"></div>
+        <h3>Khao Sok National Park</h3>
+        <p>
+          Explore the myriad of trails through the mountaineous. Choose the
+          difficulty appropriate to your fitness level.
+        </p>
+        <a href="#">Learn more</a>
+      </div>
+      <div class="card">
+        <div class="card-img"></div>
+        <h3>Rajjaprabha Dam</h3>
+        <p>
+          The goal is to reach the summit of a formation or the endpoint of a
+          usually pre-defined route without falling
+        </p>
+        <a href="#">Learn more</a>
+      </div>
+      <div class="card">
+        <div class="card-img"></div>
+        <h3>Phrathat Si Surat</h3>
+        <p>
+          Exploring underground through networks of tunnels and passageways,
+          which can be natural or artificial.
+        </p>
+        <a href="#">Learn more</a>
+      </div>
+      <div class="card">
+        <div class="card-img"></div>
+        <h3>Ban Nam Rat</h3>
+        <p>
+          Get lift off from the mountain and enjoy through the splendor of the
+          surrounding landscape by parachute.
+        </p>
+        <a href="#">Learn more</a>
+      </div>
+    </section>
+
+    <section class="buffer">
+      <div class="sec row col-12">
+        <div class="sec col-12 box">
+          <div class="col-4">
+            <img src="./imgaes/star2.png" id="sunshine1" style="width: 50%" />
+          </div>
+          <div class="col-8 contenttext">
+            <br /><br /><br />
+            <h2
+              style="
+                text-align: center;
+                font-size: 4vw;
+                color: #060606;
+                margin-bottom: 90px;
+                margin-top: 90;
+              "
+            >
+              Did you like this trip?
+            </h2>
+            <!-- <center>
+              <p>
+                <br />
+                Cerro Torre is a mountain of sheer beauty whose spectacular
+                attributes make it an unique gem in Argentina.
+                <br />
+              </p>
+            </center> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      var audio = document.getElementById("myaudio");
+      audio.volume = 0.4;
+    </script>
   </body>
 </html>
