@@ -52,6 +52,10 @@ ID 6502041520064 -->
       <img src="./imgaes/sun.png" class="imgindex" id="sun" />
 
       <h2 id="titlebg">WELCOME</h2>
+      <br /><br />
+      <audio id="myaudio" class="myaudio" controls autoplay muted>
+        <source src="./music/wagzak.mp3" type="audio/mpeg" />
+      </audio>
     </section>
 
     <div class="sec row col-12" id="sec">
@@ -79,19 +83,14 @@ ID 6502041520064 -->
             >
               Let's Go !!!
             </button>
-            <br />
-            <br />
-            <!-- <audio controls autoplay muted>
-              <source
-                src="https://www.youtube.com/watch?v=nN8dCKc6IUE"
-                type="audio/ogg"
-              />
-              <source src="horse.mp3" type="audio/mpeg" />
-            </audio> -->
           </div>
         </div>
       </div>
     </div>
+    <script>
+      var audio = document.getElementById("myaudio");
+      audio.volume = 0.4;
+    </script>
+    <script type="text/javascript" src="./js/index.js"></script>
   </body>
 </html>
-<script type="text/javascript" src="./js/index.js"></script>

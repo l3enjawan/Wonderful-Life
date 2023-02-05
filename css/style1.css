@@ -120,6 +120,15 @@ section::before {
   z-index: 1;
 }
 
+.myaudio {
+  margin-top: 200px;
+  padding: 10, auto;
+  position: absolute;
+  color: #fff;
+  white-space: nowrap;
+  z-index: 4;
+}
+
 .sec {
   padding: 100px;
   background-color: #536cc3;
