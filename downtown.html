@@ -10,8 +10,10 @@ ID 6502041520064 -->
     <link rel="shortcut icon" type="image/jpg" href="./imgaes/logo.jpg" />
 
     <!-- CSS -->
-    <link href="./css/style1.css" rel="stylesheet" />
-    <link href="./css/styletraval.css" rel="stylesheet" />
+    <link href="./css/styletrip.css" rel="stylesheet" />
+    <link href="./css/styleheader.css" rel="stylesheet" />
+    <!-- <link href="./css/styletraval.css" rel="stylesheet" /> -->
+
     <!-- font google -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +22,48 @@ ID 6502041520064 -->
       rel="stylesheet"
     />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+      .parallax-container {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        /*  this is where the magic happens:  */
+        background-attachment: fixed;
+
+        background-image: url("./imgaes/downtown1.gif");
+        background-position: center;
+        background-size: cover;
+        color: var(--color);
+        row-gap: 4rem;
+
+        text-align: center;
+      }
+
+      .parallax-container2 {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        padding: 6rem 0;
+        background-image: url("./imgaes/downtown2.gif");
+      }
+
+      .card:nth-of-type(1) .card-img {
+        background-image: url("./imgaes/khaosok.png");
+      }
+
+      .card:nth-of-type(2) .card-img {
+        background-image: url("./imgaes/rajjaprabha.png");
+      }
+
+      .card:nth-of-type(3) .card-img {
+        background-image: url("./imgaes/watpchaiya.png");
+      }
+
+      .card:nth-of-type(4) .card-img {
+        background-image: url("./imgaes/namrat.png");
+      }
     </style>
   </head>
   <body>
@@ -32,7 +75,6 @@ ID 6502041520064 -->
           <ul>
             <li><a href="./index.html">Home</a></li>
             <li><a href="./choosetrip.html" class="active">Trips</a></li>
-
             <!-- <li><a href="./natural.html">Natural</a></li>
             <li><a href="./downtown.html">Downtown</a></li>
             <li><a href="./sea.html">Sea</a></li> -->
@@ -41,12 +83,285 @@ ID 6502041520064 -->
         </header>
       </div>
     </div>
-    <div class="content">
-      <div class="col-12" style="margin-top: 5%">
-        <h2 style="text-align: center; font-size: 7.5vw; color: #fff">
-          Downtown
-        </h2>
+    <section class="parallax-container">
+      <div class="sec row col-12">
+        <div class="sec row col-12 box">
+          <br /><br /><br />
+          <h2
+            style="
+              text-align: center;
+              font-size: 7.5vw;
+              color: #fff;
+              margin-bottom: 90px;
+            "
+          >
+            Downtown
+          </h2>
+        </div>
+      </div>
+      <audio id="myaudio" class="myaudio" controls autoplay muted>
+        <source src="./music/wagzak.mp3" type="audio/mpeg" />
+      </audio>
+    </section>
+
+    <section class="buffer">
+      <div class="sec row col-12">
+        <div class="sec col-12 box">
+          <div class="col-8 contenttext">
+            <br /><br /><br />
+            <h2 style="text-align: center; font-size: 4vw; color: #060606">
+              Hey, I'm Star.
+            </h2>
+            <br />
+            <center>
+              <p>
+                <br />
+                I'm Sunshine's friend, acting as a nature tour guide.
+                <br />
+                I have many natural attractions in Surat for you to see.
+              </p>
+            </center>
+
+            <br /><br /><br />
+          </div>
+          <div class="col-4">
+            <img src="./imgaes/star1.png" id="sunshine1" style="width: 80%" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="parallax-container parallax-container2">
+      <div class="card">
+        <div class="card-img"></div>
+        <h3 style="margin-top: 10px; margin-bottom: 10px">
+          Khao Sok National Park
+        </h3>
+        <!-- Trigger/Open The Modal -->
+        <button id="myBtn1">Read more</button>
+      </div>
+      <div class="card">
+        <div class="card-img"></div>
+        <h3 style="margin-top: 10px; margin-bottom: 10px">Rajjaprabha Dam</h3>
+
+        <button id="myBtn2">Read more</button>
+      </div>
+      <div class="card">
+        <div class="card-img"></div>
+        <h3 style="margin-top: 10px; margin-bottom: 10px">
+          Wat Phra Borommathat Chaiya
+        </h3>
+
+        <button id="myBtn3">Read more</button>
+      </div>
+      <div class="card">
+        <div class="card-img"></div>
+        <h3 style="margin-top: 10px; margin-bottom: 10px">Ban Nam Rat</h3>
+
+        <button id="myBtn4">Read more</button>
+      </div>
+    </section>
+    <!-- The Modal -->
+    <div id="myModal1" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Khao Sok National Park</h2>
+        </div>
+        <div class="modal-body row col-12">
+          <div class="col-12">
+            <div class="col-6">
+              <img src="./imgaes/khaosok.png" style="width: 100%" />
+            </div>
+            <div class="col-6">
+              <p
+                style="
+                  font-size: 1.5vw;
+                  color: #060606;
+                  margin-bottom: 90px;
+                  margin-top: 90;
+                "
+              >
+                Did you like this trip?
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <div id="myModal2" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Rajjaprabha Dam</h2>
+        </div>
+        <div class="modal-body row col-12">
+          <div class="col-12">
+            <div class="col-6">
+              <img src="./imgaes/rajjaprabha.png" style="width: 100%" />
+            </div>
+            <div class="col-6">
+              <p
+                style="
+                  font-size: 1.5vw;
+                  color: #060606;
+                  margin-bottom: 90px;
+                  margin-top: 90;
+                "
+              >
+                Did you like this trip?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="myModal3" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Wat Phra Borommathat Chaiya</h2>
+        </div>
+        <div class="modal-body row col-12">
+          <div class="col-12">
+            <div class="col-6">
+              <img src="./imgaes/watpchaiya.png" style="width: 100%" />
+            </div>
+            <div class="col-6">
+              <p
+                style="
+                  font-size: 1.5vw;
+                  color: #060606;
+                  margin-bottom: 90px;
+                  margin-top: 90;
+                "
+              >
+                Did you like this trip?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="myModal4" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Ban Nam Rat</h2>
+        </div>
+        <div class="modal-body row col-12">
+          <div class="col-12">
+            <div class="col-6">
+              <img src="./imgaes/namrat.png" style="width: 100%" />
+            </div>
+            <div class="col-6">
+              <p
+                style="
+                  font-size: 1.5vw;
+                  color: #060606;
+                  margin-bottom: 90px;
+                  margin-top: 90;
+                "
+              >
+                Did you like this trip?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="buffer">
+      <div class="sec row col-12">
+        <div class="sec col-12 box">
+          <div class="col-4">
+            <img src="./imgaes/star2.png" id="sunshine1" style="width: 50%" />
+          </div>
+          <div class="col-8 contenttext">
+            <br /><br /><br />
+            <h2
+              style="
+                text-align: center;
+                font-size: 4vw;
+                color: #060606;
+                margin-bottom: 90px;
+                margin-top: 90;
+              "
+            >
+              Did you like this trip?
+            </h2>
+            <!-- <center>
+              <p>
+                <br />
+                Cerro Torre is a mountain of sheer beauty whose spectacular
+                attributes make it an unique gem in Argentina.
+                <br />
+              </p>
+            </center> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      var audio = document.getElementById("myaudio");
+      audio.volume = 0.4;
+    </script>
+
+    <script>
+      // Get the modal
+      var modal1 = document.getElementById("myModal1");
+      var modal2 = document.getElementById("myModal2");
+      var modal3 = document.getElementById("myModal3");
+      var modal4 = document.getElementById("myModal4");
+
+      // Get the button that opens the modal
+      var btn1 = document.getElementById("myBtn1");
+      var btn2 = document.getElementById("myBtn2");
+      var btn3 = document.getElementById("myBtn3");
+      var btn4 = document.getElementById("myBtn4");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+      btn1.onclick = function () {
+        modal1.style.display = "block";
+      };
+      btn2.onclick = function () {
+        modal2.style.display = "block";
+      };
+      btn3.onclick = function () {
+        modal3.style.display = "block";
+      };
+      btn4.onclick = function () {
+        modal4.style.display = "block";
+      };
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal1.style.display = "none";
+        modal2.style.display = "none";
+        modal3.style.display = "none";
+        modal4.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal1) {
+          modal1.style.display = "none";
+        }
+        if (event.target == modal2) {
+          modal2.style.display = "none";
+        }
+        if (event.target == modal3) {
+          modal3.style.display = "none";
+        }
+        if (event.target == modal4) {
+          modal4.style.display = "none";
+        }
+      };
+    </script>
   </body>
 </html>
