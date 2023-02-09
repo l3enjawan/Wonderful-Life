@@ -4,9 +4,6 @@ function navigateTopage(to) {
   };
 }
 
-var audio = document.getElementById("myaudio");
-audio.volume = 0.4;
-
 // Sun index
 let sun = document.getElementById("sun");
 let tetitlebg = document.getElementById("titlebg");
@@ -32,3 +29,6 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+var audio = document.getElementById("myaudio");
+audio.volume = 0.4;
