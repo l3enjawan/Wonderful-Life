@@ -176,6 +176,7 @@ section::before {
 
 .myaudio {
   margin-top: 200px;
+  margin-bottom: 50px;
   padding: 10, auto;
   position: absolute;
   color: #fff;
