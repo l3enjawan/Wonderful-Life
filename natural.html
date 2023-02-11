@@ -99,7 +99,7 @@ ID 6502041520064 -->
           </h2>
         </div>
       </div>
-      <audio id="myaudio" class="myaudio" controls autoplay muted>
+      <audio id="myaudio" class="myaudio" controls autoplay>
         <source src="./music/wagzak.mp3" type="audio/mpeg" />
       </audio>
     </section>
@@ -316,14 +316,16 @@ ID 6502041520064 -->
               Try A New Trip.
             </h2>
             <center>
-              <button
-                id="gotrip"
-                class="button-arounder"
-                onclick="navigateTotrip('./choosetrip.html');"
-                style="margin-bottom: 50px; font-size: 2vw"
-              >
-                Try Now
-              </button>
+              <a href="./choosetrip.html">
+                <button
+                  id="gotrip"
+                  class="button-arounder"
+                  onclick="navigateTotrip('./choosetrip.html');"
+                  style="margin-bottom: 50px; font-size: 2vw"
+                >
+                  Try Now
+                </button>
+              </a>
             </center>
           </div>
         </div>
